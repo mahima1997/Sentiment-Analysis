@@ -56,7 +56,7 @@ model.add(Embedding(len(word_index) + 1,EMBEDDING_DIM,input_length=MAX_SEQUENCE_
 model.add(Flatten())
 model.add(Dense(1, activation='sigmoid'))
 # compile the model
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['acc'])
+model.compile(optimizer='rmsprop', loss='binary_crossentropy', metrics=['acc'])
 # summarize the model
 print(model.summary())
 # fit the model
