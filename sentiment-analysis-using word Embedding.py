@@ -32,8 +32,8 @@ data = data[indices]
 labels = labels[indices]
 
 #the output from the Embedding layer will be 25 vectors of 20 dimensions each, one vector
-#for each word in the text data instance. We flatten this to a one 32-element vector to pass on to the Dense output layer.
-#The Embedding has a vocabulary of 1500 and an input length of 25. We have chosen a small embedding space of 8 dimensions.
+#for each word in the text data instance. We flatten this to a one 500-element vector to pass on to the Dense output layer.
+#The Embedding has a vocabulary of 1500 and an input length of 25. We have chosen a small embedding space of 20 dimensions.
 
 EMBEDDING_DIM=20
 embedding_layer = Embedding(len(word_index) + 1,EMBEDDING_DIM,input_length=MAX_SEQUENCE_LENGTH)
